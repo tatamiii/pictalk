@@ -1,7 +1,13 @@
 <div class="post">
   <% @post.each do |post| %>
-      <%= post.name %>
-      <p><%= post.text %></p>
+    <div class="one_post">
+      <div class="post_name">
+        <%= post.name %>
+      </div>
+      <div class="post_text">
+        <p><%= post.text %></p>
+      </div>
       <%= image_tag post.image.variant(resize:'500x500') if post.image.attached? %>
+    </div>
   <% end %>
 </div>
