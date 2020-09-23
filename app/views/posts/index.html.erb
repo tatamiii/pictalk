@@ -1,9 +1,10 @@
 <div class="post">
   <% @post.each do |post| %>
+      <%= post.name %>
       <p><%= post.text %></p>
       <span class="name">
-        <%= post.name %>
       </span>
+      <%= image_tag post.image.variant(resize:'500x500'), class: 'message-image' if post.image.attached? %>
     </div>
   <% end %>
 </div>
