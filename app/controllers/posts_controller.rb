@@ -9,6 +9,11 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
+    if Post.create
+      redirect_to root_path
+     else
+       render :new
+     end
   end
 
   private
