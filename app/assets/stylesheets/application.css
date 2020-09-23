@@ -17,3 +17,16 @@
  * {
   box-sizing: border-box;
 }
+
+header{
+  background: red;
+  display: flex;
+  height: 54px;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.post{
+  padding-top: 60px;
+}
