@@ -1,4 +1,9 @@
 <div class="post">
-  <h1>Posts#index</h1>
-  <p>Find me in app/views/posts/index.html.erb</p>
+  <% @post.each do |post| %>
+      <p><%= post.text %></p>
+      <span class="name">
+        <%= post.name %>
+      </span>
+    </div>
+  <% end %>
 </div>
