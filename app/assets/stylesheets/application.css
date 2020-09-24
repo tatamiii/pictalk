@@ -68,3 +68,36 @@ form textarea {
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
 }
+
+.show{
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.show_left{
+  width: 600px;
+  height: 600px;
+  background-color: greenyellow;
+}
+
+.show_right{
+  width: 350px;
+  height: 600px;
+  background-color: grey;
+}
+
+.poster{
+  height: 100px;
+  background-color: hotpink;
+}
+
+.comments{
+  height: 400px;
+  background-color: indigo;
+}
+
+.comment{
+  height: 100px;
+  background-color: lightsalmon;
+}
