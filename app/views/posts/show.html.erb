@@ -14,9 +14,13 @@
 
     <div class="comment">
     <% if current_user %>
-      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+      <div class="message">
+        <%= form_with(model: [@post, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+      </div>
+      <div class="send">
+        <%= form.submit "送信" %>
+      </div>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
