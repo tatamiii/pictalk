@@ -1,5 +1,6 @@
 <div class="post">
   <% @post.each do |post| %>
+    <%= link_to '削除', post_path(post.id), method: :delete %>
     <div class="one_post">
       <div class="post_name">
         <%= post.name %>
