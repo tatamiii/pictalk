@@ -79,6 +79,9 @@ form textarea {
   width: 600px;
   height: 600px;
   background-color: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .show_right{

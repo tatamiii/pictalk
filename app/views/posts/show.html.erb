@@ -1,6 +1,7 @@
 <div class="show">
 
   <div class="show_left">
+    <%= image_tag @post.image.variant(resize:'550x550') if @post.image.attached?  %>
   </div>
 
   <div class="show_right">
