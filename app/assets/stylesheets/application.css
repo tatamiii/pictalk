@@ -91,12 +91,12 @@ form textarea {
 }
 
 .poster{
-  height: 100px;
+  height: 50px;
   background-color: hotpink;
 }
 
 .comments{
-  height: 400px;
+  height: 450px;
   background-color: indigo;
 }
 
