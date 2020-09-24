@@ -1,5 +1,8 @@
 <div class="post">
   <% @post.each do |post| %>
+    <% if user_signed_in? && current_user.id == post.user_id %>
+      <%= link_to '削除', post_path(post.id), method: :delete %>
+    <% end %>
     <div class="one_post">
       <div class="post_name">
         <%= post.name %>
