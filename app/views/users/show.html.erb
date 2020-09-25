@@ -1,0 +1,18 @@
+<div class="post">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @posts.each do |post| %>
+      <%= link_to '詳細', post_path(post.id), method: :get %>
+      <% if user_signed_in? && current_user.id == post.user_id %>
+        <%= link_to '削除', post_path(post.id), method: :delete %>
+      <% end %>
+      <div class="one_post">
+        <div class="post_name">
+          <%= post.user.nickname %>
+        </div>
+        <div class="post_text">
+          <p><%= post.text %></p>
+        </div>
+        <%= image_tag post.image.variant(resize:'500x500') if post.image.attached? %>
+      </div>
+  <% end %>
+</div>
