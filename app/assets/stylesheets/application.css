@@ -59,12 +59,72 @@ header{
   /* border: 1px solid #AAA; */
 }
 
-form input,
-form textarea {
+.post form input,
+.post form textarea {
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
+}
+
+.show{
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.show_left{
+  width: 600px;
+  height: 600px;
+  background-color: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show_right{
+  width: 350px;
+  height: 600px;
+  background-color: grey;
+}
+
+.poster{
+  height: 50px;
+  background-color: hotpink;
+}
+
+.comments{
+  height: 450px;
+  background-color: indigo;
+}
+
+.comment{
+  height: 100px;
+  background-color: lightsalmon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment form textarea{
+  width: 270px;
+  margin-right: 10px;
+}
+
+.comment input{
+  width: 50px;
+  height: 50px;
+}
+
+.message{
+  display: flex;
+  justify-content: center;
 }

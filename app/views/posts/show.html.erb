@@ -1,0 +1,40 @@
+<div class="show">
+
+  <div class="show_left">
+    <%= image_tag @post.image.variant(resize:'550x550') if @post.image.attached?  %>
+  </div>
+
+  <div class="show_right">
+    <div class="poster">
+      <%= @post.user.nickname %>
+    </div>
+
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="comment">
+    <% if current_user %>
+      <div class="message">
+        <%= form_with(model: [@post, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+      </div>
+      <div class="send">
+        <%= form.submit "送信" %>
+      </div>
+      <% end %>
+    <% else %>
+      <p>※コメントには新規登録/ログインが必要です※</p>
+    <% end %>
+    </div>
+  </div>
+
+</div>
