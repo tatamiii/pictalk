@@ -45,9 +45,23 @@ header{
   margin-bottom: 20px;
 }
 
-.post_name,
-.post_text{
-  padding-top: 10px;
+.post_header{
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15px;
+  background-color: lightsalmon;
+}
+
+.post_header_left{
+  display: flex;
+  align-items: center;
+}
+
+.post_header_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .post form{
