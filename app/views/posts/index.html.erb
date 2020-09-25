@@ -6,7 +6,7 @@
     <% end %>
     <div class="one_post">
       <div class="post_name">
-        <%= post.user.nickname %>
+        <%= link_to post.user.nickname, "/users/#{post.user_id}" %>
       </div>
       <div class="post_text">
         <p><%= post.text %></p>
