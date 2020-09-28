@@ -9,11 +9,17 @@
           </div>
         </div>
         <div class="post_header_right">
-          <%= link_to '詳細', post_path(post.id), method: :get %>
-          <% if user_signed_in? && current_user.id == post.user_id %>
-          <%= link_to '削除', post_path(post.id), method: :delete %>
-          <% end %>
+        
+              <button class="accordion__title js-accordion-title">Menu</button>
+              <div class="accordion__content">
+                <%= link_to '詳細', post_path(post.id), method: :get %>
+                <% if user_signed_in? && current_user.id == post.user_id %>
+                  <%= link_to '削除', post_path(post.id), method: :delete %>
+                <% end %>
+          </div>
         </div>
+
+
 
 
       </div>
