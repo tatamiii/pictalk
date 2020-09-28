@@ -12,6 +12,7 @@
   <header class="header">
     <h1 class="insta"><a href="/">Home</a></h1>
     <% if user_signed_in? %>
+      <%= link_to "マイページ", "/users/#{current_user.id}" %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       <%= link_to "投稿する", new_post_path %>
     <% else %>

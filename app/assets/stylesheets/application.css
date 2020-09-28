@@ -19,7 +19,8 @@
 }
 
 header{
-  background: red;
+  background:white;
+  border-bottom: lightslategray solid 1px;
   display: flex;
   height: 54px;
   position: fixed;
@@ -32,7 +33,6 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: green;
 }
 
 .one_post{
@@ -45,9 +45,24 @@ header{
   margin-bottom: 20px;
 }
 
-.post_name,
-.post_text{
-  padding-top: 10px;
+.post_header{
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15px;
+  background-color: lightsalmon;
+}
+
+.post_header_left{
+  display: flex;
+  align-items: center;
+}
+
+.post_header_right{
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .post form{
@@ -127,4 +142,43 @@ header{
 .message{
   display: flex;
   justify-content: center;
+}
+
+.accordion__title {
+  width: 60px;
+  background-color: #000;
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion__title:hover,
+.accordion__title:active,
+.accordion__title.is-active { 
+  background-color: #00aaa7;
+}
+
+.accordion__title.is-active::before {
+  opacity: 0;
+}
+
+.accordion__title.is-active::after {
+  transform: rotate(0);
+}
+
+.accordion__content {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.accordion__content.is-open {
+  border: 1px solid #00aaa7;
+  line-height: normal; /* numberに書き換える*/
+  height: auto;
+  opacity: 1;
 }
